@@ -4,9 +4,12 @@ Housing_market_application_v2
 
 
 # Data Fetch
-...
+... Code is ready. Test data has been fetched and saved in MongoDb 
 
 # Data Processing
-...
+... Logic TBD
+# Application
+... TBD
+
 
 
