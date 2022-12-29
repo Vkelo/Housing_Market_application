@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Housing_Market_application
 Housing_market_application_v2
 <img width="639" alt="housing_market" src="https://user-images.githubusercontent.com/71639133/183844571-fc433dee-93a4-4760-b253-3546b4aac2e5.png">
@@ -89,3 +90,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 >>>>>>> 51b0135 (Initialize project using Create React App)
+=======
+
+>>>>>>> 990e8c1 (Update README.md)
