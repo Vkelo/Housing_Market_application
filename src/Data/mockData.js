@@ -3,19 +3,19 @@ import { tokens } from "../theme";
 export const mockDataTeam = [
   {
     id: 1,
-    name: "Jon Snow",
-    email: "jonsnow@gmail.com",
-    age: 35,
-    phone: "(665)121-5454",
+    name: "Vili Kelo",
+    email: "anton.kelo58@gmail.com",
+    age: 23,
+    phone: "050505050864",
     access: "admin",
   },
   {
     id: 2,
-    name: "Cersei Lannister",
-    email: "cerseilannister@gmail.com",
-    age: 42,
-    phone: "(421)314-2288",
-    access: "manager",
+    name: "Aapo Palkama",
+    email: "aapopalkama@gmail.com",
+    age: 6,
+    phone: "+358400992995",
+    access: "orja",
   },
   {
     id: 3,
@@ -78,23 +78,23 @@ export const mockDataTeam = [
 export const mockDataContacts = [
   {
     id: 1,
-    name: "Jon Snow",
-    email: "jonsnow@gmail.com",
-    age: 35,
-    phone: "(665)121-5454",
-    address: "0912 Won Street, Alabama, SY 10001",
+    name: "Vili Kelo",
+    email: "anton.kelo58@gmail.com",
+    age: 23,
+    phone: "0505050864",
+    address: "Pitkäkatu 35, Jyväakylä, SY 10001",
     city: "New York",
     zipCode: "10001",
     registrarId: 123512,
   },
   {
     id: 2,
-    name: "Cersei Lannister",
-    email: "cerseilannister@gmail.com",
-    age: 42,
-    phone: "(421)314-2288",
-    address: "1234 Main Street, New York, NY 10001",
-    city: "New York",
+    name: "Aapo Palkama",
+    email: "aapopalkama@gmail.com",
+    age: 6,
+    phone: "+358 400992995",
+    address: "viemäri, , NY 666",
+    city: "Manila",
     zipCode: "13151",
     registrarId: 123512,
   },
@@ -202,7 +202,7 @@ export const mockDataContacts = [
 export const mockDataInvoices = [
   {
     id: 1,
-    name: "Jon Snow",
+    name: "Vili Kelo",
     email: "jonsnow@gmail.com",
     cost: "21.24",
     phone: "(665)121-5454",
@@ -210,7 +210,7 @@ export const mockDataInvoices = [
   },
   {
     id: 2,
-    name: "Cersei Lannister",
+    name: "Aapo Palkama",
     email: "cerseilannister@gmail.com",
     cost: "1.24",
     phone: "(421)314-2288",
@@ -268,52 +268,52 @@ export const mockDataInvoices = [
 
 export const mockTransactions = [
   {
-    txId: "01e4dsa",
-    user: "johndoe",
-    date: "2021-09-01",
-    cost: "43.95",
+    txId: "Placeholder Name",
+    user: "Placeholder Loc",
+    date: "Placeholder Time",
+    cost: "Placeholder Price",
   },
   {
-    txId: "0315dsaa",
-    user: "jackdower",
-    date: "2022-04-01",
-    cost: "133.45",
+    txId: "Placeholder Name",
+    user: "Placeholder Loc",
+    date: "Placeholder Time",
+    cost: "Placeholder Price",
   },
   {
-    txId: "01e4dsa",
-    user: "aberdohnny",
-    date: "2021-09-01",
-    cost: "43.95",
+    txId: "Placeholder Name",
+    user: "Placeholder Loc",
+    date: "Placeholder Time",
+    cost: "Placeholder Price",
   },
   {
-    txId: "51034szv",
-    user: "goodmanave",
-    date: "2022-11-05",
-    cost: "200.95",
+    txId: "Placeholder Name",
+    user: "Placeholder Loc",
+    date: "Placeholder Time",
+    cost: "Placeholder Price",
   },
   {
-    txId: "0a123sb",
-    user: "stevebower",
-    date: "2022-11-02",
-    cost: "13.55",
+    txId: "Placeholder Name",
+    user: "Placeholder Loc",
+    date: "Placeholder Time",
+    cost: "Placeholder Price",
   },
   {
-    txId: "01e4dsa",
-    user: "aberdohnny",
-    date: "2021-09-01",
-    cost: "43.95",
+    txId: "Placeholder Name",
+    user: "Placeholder Loc",
+    date: "Placeholder Time",
+    cost: "Placeholder Price",
   },
   {
-    txId: "120s51a",
-    user: "wootzifer",
-    date: "2019-04-15",
-    cost: "24.20",
+    txId: "Placeholder Name",
+    user: "Placeholder Loc",
+    date: "Placeholder Time",
+    cost: "Placeholder Price",
   },
   {
-    txId: "0315dsaa",
-    user: "jackdower",
-    date: "2022-04-01",
-    cost: "133.45",
+    txId: "Placeholder Name",
+    user: "Placeholder Loc",
+    date: "Placeholder Time",
+    cost: "Placeholder Price",
   },
 ];
 
@@ -432,163 +432,163 @@ export const mockPieData = [
 
 export const mockLineData = [
   {
-    id: "japan",
+    id: "hybridi",
     color: tokens("dark").greenAccent[500],
     data: [
       {
-        x: "plane",
-        y: 101,
+        x: "2012",
+        y: 100,
       },
       {
-        x: "helicopter",
+        x: "2013",
         y: 75,
       },
       {
-        x: "boat",
+        x: "2014",
         y: 36,
       },
       {
-        x: "train",
+        x: "2015",
         y: 216,
       },
       {
-        x: "subway",
+        x: "2016",
         y: 35,
       },
       {
-        x: "bus",
+        x: "2017",
         y: 236,
       },
       {
-        x: "car",
+        x: "2018",
         y: 88,
       },
       {
-        x: "moto",
+        x: "2019",
         y: 232,
       },
       {
-        x: "bicycle",
+        x: "2020",
         y: 281,
       },
       {
-        x: "horse",
+        x: "2021",
         y: 1,
       },
       {
-        x: "skateboard",
+        x: "2022",
         y: 35,
       },
       {
-        x: "others",
+        x: "2023",
         y: 14,
       },
     ],
   },
   {
-    id: "france",
+    id: "omistus",
     color: tokens("dark").blueAccent[300],
     data: [
       {
-        x: "plane",
-        y: 212,
+        x: "2012",
+        y: 100,
       },
       {
-        x: "helicopter",
+        x: "2013",
+        y: 110,
+      },
+      {
+        x: "2014",
+        y: 120,
+      },
+      {
+        x: "2015",
+        y: 130,
+      },
+      {
+        x: "2016",
+        y: 140,
+      },
+      {
+        x: "2017",
+        y: 150,
+      },
+      {
+        x: "2018",
+        y: 160,
+      },
+      {
+        x: "2019",
+        y: 170,
+      },
+      {
+        x: "2020",
+        y: 180,
+      },
+      {
+        x: "2021",
         y: 190,
       },
       {
-        x: "boat",
-        y: 270,
+        x: "2022",
+        y: 200,
       },
       {
-        x: "train",
-        y: 9,
-      },
-      {
-        x: "subway",
-        y: 75,
-      },
-      {
-        x: "bus",
-        y: 175,
-      },
-      {
-        x: "car",
-        y: 33,
-      },
-      {
-        x: "moto",
-        y: 189,
-      },
-      {
-        x: "bicycle",
-        y: 97,
-      },
-      {
-        x: "horse",
-        y: 87,
-      },
-      {
-        x: "skateboard",
-        y: 299,
-      },
-      {
-        x: "others",
-        y: 251,
+        x: "2023",
+        y: 210,
       },
     ],
   },
   {
-    id: "us",
+    id: "vuokra",
     color: tokens("dark").redAccent[200],
     data: [
       {
-        x: "plane",
-        y: 191,
+        x: "2012",
+        y: 100,
       },
       {
-        x: "helicopter",
+        x: "2013",
         y: 136,
       },
       {
-        x: "boat",
+        x: "2014",
         y: 91,
       },
       {
-        x: "train",
+        x: "2015",
         y: 190,
       },
       {
-        x: "subway",
+        x: "2016",
         y: 211,
       },
       {
-        x: "bus",
+        x: "2017",
         y: 152,
       },
       {
-        x: "car",
+        x: "2018",
         y: 189,
       },
       {
-        x: "moto",
+        x: "2019",
         y: 152,
       },
       {
-        x: "bicycle",
+        x: "2020",
         y: 8,
       },
       {
-        x: "horse",
+        x: "2021",
         y: 197,
       },
       {
-        x: "skateboard",
+        x: "2022",
         y: 107,
       },
       {
-        x: "others",
+        x: "2023",
         y: 170,
       },
     ],
