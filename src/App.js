@@ -16,6 +16,16 @@ import { ColorModeContext, useMode } from "./theme";
 import Calendar from "./scenes/calendar/calendar";
 import Dashboard from "./scenes/dashboard";
 
+// Create a new meta element
+const viewportMeta = document.createElement('meta');
+
+// Set the name and content attributes of the meta element
+viewportMeta.name = 'viewport';
+viewportMeta.content = 'width=device-width, initial-scale=1.0';
+
+// Add the meta element to the head of the document
+document.head.appendChild(viewportMeta);
+
 function App() {
   const [theme, colorMode] = useMode();
   const [isSidebar, setIsSidebar] = useState(true);

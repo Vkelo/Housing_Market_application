@@ -13,7 +13,6 @@ import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
@@ -83,7 +82,7 @@ const MyProSidebar = () => {
       <Sidebar
         breakPoint="md"
         rtl={sidebarRTL}
-        backgroundColor={colors.primary[400]}
+        backgroundColor={colors.grey[800]}
         image={sidebarImage}
       >
         <Menu iconshape="square">
@@ -134,7 +133,7 @@ const MyProSidebar = () => {
                 alignItems="center"
                 sx={{
                   "& .avater-image": {
-                    backgroundColor: colors.primary[500],
+                    backgroundColor: colors.primary[400],
                   },
                 }}
               >
@@ -212,13 +211,6 @@ const MyProSidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Calendar"
-              to="/calendar"
-              icon={<CalendarTodayOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
               title="FAQ Page"
               to="/faq"
               icon={<HelpOutlineOutlinedIcon />}
@@ -234,7 +226,7 @@ const MyProSidebar = () => {
               Charts
             </Typography>
             <Item
-              title="Bar Chart"
+              title="Myynti asuinalueittain"
               to="/bar"
               icon={<BarChartOutlinedIcon />}
               selected={selected}
@@ -248,7 +240,7 @@ const MyProSidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Line Chart"
+              title="Historiallinen hintakehitys"
               to="/line"
               icon={<TimelineOutlinedIcon />}
               selected={selected}
