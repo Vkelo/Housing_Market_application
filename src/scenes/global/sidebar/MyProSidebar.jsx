@@ -11,7 +11,6 @@ import { useTheme, Box, Typography, IconButton } from "@mui/material";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
@@ -139,7 +138,7 @@ const MyProSidebar = () => {
               >
                 <img
                   className="avater-image"
-                  alt="profile user"
+                  alt="Profiili"
                   width="100px"
                   height="100px"
                   src={"../../assets/user.png"}
@@ -175,23 +174,16 @@ const MyProSidebar = () => {
               Data
             </Typography>
             <Item
-              title="Manage Team"
+              title="Omat tiedot"
               to="/team"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Contacts Information"
+              title="Kontaktit"
               to="/contacts"
               icon={<ContactsOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Invoices Balances"
-              to="/invoices"
-              icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -204,7 +196,7 @@ const MyProSidebar = () => {
               Pages
             </Typography>
             <Item
-              title="Profile Form"
+              title="Uusi käyttäjä"
               to="/form"
               icon={<PersonOutlinedIcon />}
               selected={selected}
@@ -233,7 +225,7 @@ const MyProSidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Pie Chart"
+              title="Markkinasuhde"
               to="/pie"
               icon={<PieChartOutlineOutlinedIcon />}
               selected={selected}
@@ -247,7 +239,7 @@ const MyProSidebar = () => {
               setSelected={setSelected}
             />
             <Item
-              title="Geography Chart"
+              title="Asuinalueittain"
               to="/geography"
               icon={<MapOutlinedIcon />}
               selected={selected}

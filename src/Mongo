@@ -1,0 +1,13 @@
+import axios from "axios";
+
+// Replace the URL with the URL of your server
+const API_URL = "http://localhost:5000";
+
+export const fetchLineChartData = async () => {
+  try {
+    const response = await axios.get(`${API_URL}/api/line-data`);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
