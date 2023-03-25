@@ -2,6 +2,7 @@ import { ResponsiveLine } from "@nivo/line";
 import { useTheme } from "@mui/material";
 import { tokens } from "../theme";
 import { mockLineData as data } from "../data/mockData";
+// Alimpana koodi noudetun datan käsittelyyn 
 
 const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
   const theme = useTheme();
@@ -115,3 +116,34 @@ const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
 };
 
 export default LineChart;
+
+
+/*import { useEffect, useState } from "react";
+import { ResponsiveLine } from "@nivo/line";
+import { useTheme } from "@mui/material";
+import { tokens } from "../theme";
+import { fetchLineChartData } from "../api/lineData";
+
+const LineChart = ({ isCustomLineColors = false, isDashboard = false }) => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  const [lineData, setLineData] = useState([]);
+
+  useEffect(() => {
+    fetchLineChartData().then((data) => {
+      setLineData(data);
+    });
+  }, []);
+
+  return (
+    <ResponsiveLine
+      data={lineData}
+      theme={{
+        // ...
+      }}
+      // ...
+    />
+  );
+};
+
+export default LineChart;*/
