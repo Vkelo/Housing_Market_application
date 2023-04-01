@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 
 // Connect to MongoDB database
-/*mongoose.connect("mongodb+srv://AapoPalkama:rSr8BfT92f6HfZNr@version2.mongodb.net/Aparmentdata_app_V2?retryWrites=true&w=majority", { //  --> ATLAS
+/*mongoose.connect("mongodb+srv://<UserName>:<password>@version2.mongodb.net/Aparmentdata_app_V2?retryWrites=true&w=majority", { //  --> ATLAS
 
   useNewUrlParser: true,
   useUnifiedTopology: true,
