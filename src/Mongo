@@ -1,7 +1,7 @@
-import axios from "axios";
+/*import axios from "axios";
 
 // Replace the URL with the URL of your server
-const API_URL = "http://localhost:5000";
+const API_URL = "http://localhost:5001";
 
 export const fetchLineChartData = async () => {
   try {
@@ -11,3 +11,4 @@ export const fetchLineChartData = async () => {
     console.error(error);
   }
 };
+*/

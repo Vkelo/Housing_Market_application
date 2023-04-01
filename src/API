@@ -1,3 +1,4 @@
+// RUN with "node src/API"
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -6,9 +7,53 @@ const app = express();
 app.use(cors());
 
 // Connect to MongoDB database
-mongoose.connect("mongodb://localhost:27017/myDatabase", {
+/*mongoose.connect("mongodb+srv://AapoPalkama:rSr8BfT92f6HfZNr@version2.mongodb.net/Aparmentdata_app_V2?retryWrites=true&w=majority", { //  --> ATLAS
+
   useNewUrlParser: true,
   useUnifiedTopology: true,
+});*/
+const { MongoClient } = require('mongodb');
+const uri = "mongodb+srv://AapoPalkama:rSr8BfT92f6HfZNr@version2.95qsvfq.mongodb.net/ApartmentDataAppV2?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+async function fetchData(limit = 5) {
+  try {
+    await client.connect();
+    const collection = client.db("Aparmentdata_app_V2").collection("finalTable");
+    const data = await collection.find().limit(limit).toArray();
+    return data;
+  } catch (err) {
+    console.error('Failed to fetch data from MongoDB:', err);
+    throw err;
+  } finally {
+    await client.close();
+  }
+}
+
+// Define API routes
+app.get("/", async (req, res) => {
+  try {
+    const data = await fetchData(5); // modify to include limit parameter
+    res.json(data);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Server error");
+  }
+});
+
+// Start the server
+const port = process.env.PORT || 5001;
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
+});
+
+
+
+
+
+/*
+client.connect(err => { if (err) {console.error('Failed to connect to MongoDB:', err);
+return; }
+const collection = client.db("Aparmentdata_app_V2").collection("finalTable"); // perform actions on the collection object   client.close();
 });
 
 // Define schema and model for the data
@@ -30,7 +75,70 @@ app.get("/data", async (req, res) => {
 });
 
 // Start the server
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
+*/
+
+
+
+
+/*const { MongoClient } = require('mongodb');
+
+async function main() {
+  // Connection URI and database name
+  const uri = "mongodb+srv://AapoPalkama:rSr8BfT92f6HfZNr@version2.95qsvfq.mongodb.net/ApartmentDataAppV2?retryWrites=true&w=majority";
+  const client = new MongoClient(uri);
+  let result;
+  try {
+    // Connect to the MongoDB cluster
+    await client.connect();
+
+    // Access the database and collection
+    const collection = client.db("Aparmentdata_app_V2").collection("finalTable");
+    // Query the collection
+    const query = { id : 15043237 };
+    const projection = { city: 1, _id: 0, total_apartments_for_sale: 1 };
+    const result = await collection.findOne(query, { projection });
+    
+    console.log(result);
+  } catch (err) {
+    console.error(err);
+  } finally {
+    // Close the client
+    await client.close();
+  } 
+}
+main();
+*/
+
+/*async function main() {
+  // Connection URI and database name
+  const uri = "mongodb+srv://AapoPalkama:rSr8BfT92f6HfZNr@version2.95qsvfq.mongodb.net/ApartmentDataAppV2?retryWrites=true&w=majority";
+  const client = new MongoClient(uri);
+
+  let result; // define result variable in higher scope
+
+  try {
+    // Connect to the MongoDB cluster
+    await client.connect();
+
+    // Access the database and collection
+    const collection = client.db("Aparmentdata_app_V2").collection("finalTable");
+    // Query the collection
+    const query = { id : 15043237 };
+    const projection = { city: 1, _id: 0, total_apartments_for_sale: 1 };
+    result = await collection.findOne(query, { projection });
+    
+    console.log(result);
+  } catch (err) {
+    console.error(err);
+  } finally {
+    // Close the client
+    await client.close();
+  }
+
+  // Use result variable outside of try block
+  console.log(result.city);
+}*/
