@@ -1,8 +1,8 @@
+import { useState, useEffect } from "react";
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import Header from "../../components/Header";
 import LineChart from "../../components/LineChart";
 import GeographyChart from "../../components/GeographyChart";
@@ -13,6 +13,18 @@ import ProgressCircle from "../../components/ProgressCircle";
 const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const [data, setData] = useState([]);
+  const result = data.length ? data[0] : null;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("http://localhost:5001/");
+      const jsonData = await response.json();
+      setData(jsonData);
+    };
+    fetchData();
+  }, []);
+
 
   return (
     <Box m="20px">
@@ -40,7 +52,7 @@ const Dashboard = () => {
         </Box>
       </Box>
 
-      {/* GRID & CHARTS */}
+       {/* GRID & CHARTS */}
       <Box
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
@@ -49,18 +61,19 @@ const Dashboard = () => {
       >
         {/* ROW 1 */}
         <Box
+        
           gridColumn="span 3"
           backgroundColor={colors.primary[900]}
           display="flex"
           alignItems="center"
           justifyContent="center"
         >
-          <StatBox
-            title="12,361"
-            subtitle="Myynnissä olevat asunnot"
-            progress="0.75"
-            increase="+14%"
-          />
+        <StatBox
+          title={result ? result.city : "-"}
+          subtitle="Myynnissä olevat asunnot"
+          progress="0.75"
+          increase="+14%"
+        />
         </Box>
         <Box
           gridColumn="span 3"
@@ -70,15 +83,10 @@ const Dashboard = () => {
           justifyContent="center"
         >
           <StatBox
-            title="431,225"            
+            title={result ? result.city : "-"}
             subtitle="Vuokralla olevat asunnot"
             progress="0.50"
             increase="+21%"
-            icon={
-              <PointOfSaleIcon
-                sx={{ color: colors.greenAccent[100], fontSize: "26px" }}
-              />
-            }
           />
         </Box>
         <Box
@@ -202,7 +210,7 @@ const Dashboard = () => {
           ))}
         </Box>
 
-        {/* ROW 3 */}
+       {/* ROW 3 */}
         <Box
           gridColumn="span 4"
           gridRow="span 2"
