@@ -13,7 +13,6 @@ app.use(cors());
   useUnifiedTopology: true,
 });*/
 const { MongoClient } = require('mongodb');
-const uri = "mongodb+srv://AapoPalkama:rSr8BfT92f6HfZNr@version2.95qsvfq.mongodb.net/ApartmentDataAppV2?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 async function fetchData(limit = 5) {
   try {
@@ -88,7 +87,6 @@ app.listen(port, () => {
 
 async function main() {
   // Connection URI and database name
-  const uri = "mongodb+srv://AapoPalkama:rSr8BfT92f6HfZNr@version2.95qsvfq.mongodb.net/ApartmentDataAppV2?retryWrites=true&w=majority";
   const client = new MongoClient(uri);
   let result;
   try {
@@ -115,7 +113,6 @@ main();
 
 /*async function main() {
   // Connection URI and database name
-  const uri = "mongodb+srv://AapoPalkama:rSr8BfT92f6HfZNr@version2.95qsvfq.mongodb.net/ApartmentDataAppV2?retryWrites=true&w=majority";
   const client = new MongoClient(uri);
 
   let result; // define result variable in higher scope
